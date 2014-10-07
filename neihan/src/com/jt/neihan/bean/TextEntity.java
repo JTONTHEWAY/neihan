@@ -1,5 +1,7 @@
 package com.jt.neihan.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,7 +13,12 @@ import android.R.integer;
  * @author Administrator
  * 
  */
-public class TextEntity  {
+public class TextEntity implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 476672153250411453L;
 
 	private int label; // TODO 分析这个字段的含义
 
@@ -71,7 +78,7 @@ public class TextEntity  {
 		this.userFavorite = group.getInt("user_favorite");
 		this.buryCount = group.getInt("bury_count");
 		this.shareUrl = group.getString("share_url");
-		this.label = group.optInt("label",0);
+		this.label = group.optInt("label", 0);
 		this.content = group.getString("content");
 		this.commentCount = group.getInt("comment_count");
 		this.status = group.getInt("status");
@@ -87,7 +94,7 @@ public class TextEntity  {
 		this.level = group.getInt("level");
 		this.repinCount = group.getInt("repin_count");
 		this.usetRepin = group.getInt("user_repin");
-		this.hasHotComments = group.optInt("has_hot_comments",0);
+		this.hasHotComments = group.optInt("has_hot_comments", 0);
 		this.categoryId = group.getInt("category_id");
 
 	}

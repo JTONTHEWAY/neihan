@@ -1,10 +1,16 @@
 package com.jt.neihan.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ImageEntity extends TextEntity {
+public class ImageEntity extends TextEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8808873004534593482L;
 	private ImageUrlList largeImageUrlList;
 	private ImageUrlList middleimImageUrlList;
 

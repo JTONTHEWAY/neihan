@@ -10,5 +10,8 @@
     <string name="main_tab_item_review">审核</string>
     <string name="main_tab_item_huodong">活动</string>
     <string name="main_tab_item_mine">我的</string>
+    <string name="title_activity_essay_dtail">EssayDtailActivity</string>
+    <string name="essay_detail_title">详情</string>
+    <string name="detai_editText_hint">期待你的神评论</string>
 
 </resources>

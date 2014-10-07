@@ -28,6 +28,10 @@
             android:name="com.jt.test.TestActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.jt.neihan.activity.EssayDtailActivity"
+            android:label="@string/title_activity_essay_dtail" >
+        </activity>
     </application>
 
 </manifest>

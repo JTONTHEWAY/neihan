@@ -1,5 +1,6 @@
 package com.jt.neihan.bean;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,7 +8,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ImageUrlList {
+public class ImageUrlList implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1277210644167703508L;
 	private String uri;
 	private int height;
 	private int width;
@@ -23,8 +28,6 @@ public class ImageUrlList {
 	public List<String> getLargeImageList() {
 		return largeImageList;
 	}
-
-
 
 	private List<String> parseImageUrlList(JSONObject largeImage)
 			throws JSONException {
