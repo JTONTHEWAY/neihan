@@ -16,6 +16,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.jt.neihan.R;
+import com.jt.neihan.bean.ImageEntity;
 import com.jt.neihan.bean.TextEntity;
 import com.jt.neihan.bean.UserEntity;
 
@@ -113,7 +114,13 @@ public class EssayAdapter extends BaseAdapter {
 			int commentCount = entity.getCommentCount();
 			holder.txtCommentCount.setText("" + commentCount);// 因为是int类型，所以需要转化为string
 			// 设置图片的数据
+			if (entity instanceof ImageEntity) {
 
+			} else {
+				holder.pbDownLoadProgress.setVisibility(View.GONE);
+				holder.gifImageView.setVisibility(View.GONE);
+				holder.btnGifPlay.setVisibility(View.GONE);
+			}
 		}
 		return ret;
 	}

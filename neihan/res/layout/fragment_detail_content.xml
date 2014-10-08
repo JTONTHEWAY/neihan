@@ -23,11 +23,10 @@
                 android:layout_height="wrap_content"
                 android:text="热门评论" />
 
-            <ListView
+            <com.jt.neihan.view.NoScrollView
                 android:id="@+id/hot_comment_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </ListView>
+                android:layout_height="100dp" />
 
             <TextView
                 android:id="@+id/txt_reccent_comments_count"
@@ -35,11 +34,10 @@
                 android:layout_height="wrap_content"
                 android:text="新鲜评论" />
 
-            <ListView
+            <com.jt.neihan.view.NoScrollView
                 android:id="@+id/recent_comment_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-            </ListView>
+                android:layout_height="100dp" />
         </LinearLayout>
     </ScrollView>
 

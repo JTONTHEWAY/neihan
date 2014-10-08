@@ -128,6 +128,8 @@ public class TextListFragment extends Fragment implements OnClickListener,
 
 						intent.putExtra("category", requestCategory);
 						intent.putExtra("currentEssayPosition", position);
+						Log.d("TextListFragment", "this is startactivity");
+						startActivity(intent);
 					}
 				}
 			}

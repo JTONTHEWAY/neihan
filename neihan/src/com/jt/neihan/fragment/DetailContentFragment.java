@@ -69,10 +69,13 @@ public class DetailContentFragment extends Fragment implements OnTouchListener,
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		if (entity == null) {
-			Serializable serializable = getArguments()
-					.getSerializable("entity");
+			Log.d("DetailContentFragment", "DetailContentFragment can start");
+			Bundle arguments = getArguments();
+			Serializable serializable = arguments.getSerializable("entity");
 			if (serializable instanceof TextEntity) {
 				entity = (TextEntity) serializable;
+				Log.d("DetailContentFragment",
+						"DetailContentFragment can start" + entity.toString());
 			}
 		}
 		queue = Volley.newRequestQueue(getActivity());
@@ -136,6 +139,7 @@ public class DetailContentFragment extends Fragment implements OnTouchListener,
 		TextView txtContent = (TextView) view.findViewById(R.id.item_content);
 		TextView txtProfileNick = (TextView) view
 				.findViewById(R.id.item_profile_nick);
+		Log.d("DetaulContentFrag", "get entity " + entity.toString());
 		UserEntity user = entity.getUser();
 		String nick = "";
 		if (user != null) {
@@ -158,6 +162,13 @@ public class DetailContentFragment extends Fragment implements OnTouchListener,
 		int commentCount = entity.getCommentCount();
 		txtCommentCount.setText("" + commentCount);// 因为是int类型，所以需要转化为string
 		// 设置图片的数据
+		if (entity instanceof ImageEntity) {
+
+		} else {
+			pbDownLoadProgress.setVisibility(View.GONE);
+			gifImageView.setVisibility(View.GONE);
+			btnGifPlay.setVisibility(View.GONE);
+		}
 	}
 
 	private boolean hasMove = false;

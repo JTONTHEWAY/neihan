@@ -29,7 +29,7 @@ public class DetailPageAdapter extends FragmentPagerAdapter {
 		DetailContentFragment fragment = new DetailContentFragment();
 		Bundle argment = new Bundle();
 		TextEntity entity = entities.get(arg0);
-		argment.putSerializable("enetity", entity);
+		argment.putSerializable("entity", entity);
 		fragment.setArguments(argment);
 		return fragment;
 	}
